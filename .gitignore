@@ -1,6 +1,6 @@
 .DS_Store
 Thumbs.db
-
+.local/
 # Files for the Dalvik VM
 *.dex
 

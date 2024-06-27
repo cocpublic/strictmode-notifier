@@ -31,12 +31,12 @@ android {
 }
 
 dependencies {
-  compile fileTree(dir: 'libs', include: ['*.jar'])
-  testCompile 'junit:junit:4.12'
-  compile "com.android.support:appcompat-v7:$rootProject.ext.supportLibraryVersion"
+  implementation fileTree(dir: 'libs', include: ['*.jar'])
+  testImplementation 'junit:junit:4.12'
+  implementation "com.android.support:appcompat-v7:$rootProject.ext.supportLibraryVersion"
 
-  debugCompile project(":library")
-  releaseCompile project(":library-no-op")
+  debugImplementation project(":library")
+  releaseImplementation project(":library-no-op")
   //debugCompile "com.nshmura:strictmode-notifier:$rootProject.ext.versionName"
   //releaseCompile "com.nshmura:strictmode-notifier-no-op:$rootProject.ext.versionName"
 }

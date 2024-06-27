@@ -9,3 +9,4 @@ android {
     targetSdkVersion rootProject.ext.targetSdkVersion
   }
 }
+apply plugin: 'com.bzl.plugins.publish'

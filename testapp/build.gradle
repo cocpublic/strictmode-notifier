@@ -20,9 +20,9 @@ android {
 }
 
 dependencies {
-  testCompile 'junit:junit:4.12'
-  compile "com.android.support:appcompat-v7:$rootProject.ext.supportLibraryVersion"
+  testImplementation 'junit:junit:4.12'
+  implementation "com.android.support:appcompat-v7:$rootProject.ext.supportLibraryVersion"
 
-  compile project(":library")
-  //compile "com.nshmura:strictmode-notifer:$rootProject.ext.versionName"
+  implementation project(":library")
+  //implementation "com.nshmura:strictmode-notifer:$rootProject.ext.versionName"
 }
