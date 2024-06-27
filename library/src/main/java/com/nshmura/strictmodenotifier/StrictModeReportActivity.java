@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
@@ -13,6 +14,8 @@ import android.widget.ToggleButton;
 import java.util.List;
 
 import static android.app.PendingIntent.FLAG_UPDATE_CURRENT;
+
+import com.bzl.apm.strictmode.notifer.R;
 
 public class StrictModeReportActivity extends Activity {
 
@@ -83,7 +86,11 @@ public class StrictModeReportActivity extends Activity {
 
   public static PendingIntent createPendingIntent(Context context, StrictModeViolation report) {
     Intent intent = StrictModeReportActivity.createIntent(context, report);
-    intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TOP);
-    return PendingIntent.getActivity(context, 1, intent, FLAG_UPDATE_CURRENT);
+//    intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TOP);
+    intent.setFlags(Intent.FLAG_ACTIVITY_MULTIPLE_TASK |
+            Intent.FLAG_ACTIVITY_NEW_TASK |
+            Intent.FLAG_ACTIVITY_CLEAR_TASK |
+            Intent.FLAG_ACTIVITY_RESET_TASK_IF_NEEDED);
+    return PendingIntent.getActivity(context, 1, intent, Build.VERSION.SDK_INT >= Build.VERSION_CODES.M ? (PendingIntent.FLAG_IMMUTABLE | PendingIntent.FLAG_UPDATE_CURRENT) : PendingIntent.FLAG_UPDATE_CURRENT);
   }
 }

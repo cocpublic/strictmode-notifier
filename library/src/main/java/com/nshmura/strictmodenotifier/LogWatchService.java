@@ -4,6 +4,9 @@ import android.app.IntentService;
 import android.content.Intent;
 import android.text.TextUtils;
 import android.util.Log;
+
+import com.bzl.apm.strictmode.notifer.R;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;

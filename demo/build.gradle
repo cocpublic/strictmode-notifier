@@ -2,11 +2,10 @@ apply plugin: 'com.android.application'
 
 android {
   compileSdkVersion rootProject.ext.compileSdkVersion
-  buildToolsVersion rootProject.ext.buildToolsVersion
 
   defaultConfig {
     applicationId "com.nshmura.strictmodenotifier.demo"
-    minSdkVersion 11
+    minSdkVersion 21
     targetSdkVersion rootProject.ext.targetSdkVersion
     versionCode rootProject.ext.versionCode
     versionName rootProject.ext.versionName
@@ -33,7 +32,9 @@ android {
 dependencies {
   implementation fileTree(dir: 'libs', include: ['*.jar'])
   testImplementation 'junit:junit:4.12'
-  implementation "com.android.support:appcompat-v7:$rootProject.ext.supportLibraryVersion"
+  implementation "androidx.appcompat:appcompat:$rootProject.ext.supportLibraryVersion"
+  implementation "androidx.core:core:1.6.0"
+
 
   debugImplementation project(":library")
   releaseImplementation project(":library-no-op")

@@ -1,17 +1,18 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.nshmura.strictmodenotifier">
+    package="com.bzl.apm.strictmode.notifer">
 
   <application>
 
     <service
-        android:name=".LogWatchService"
+        android:name="com.nshmura.strictmodenotifier.LogWatchService"
         android:exported="false"/>
 
     <activity
-        android:name=".StrictModeReportActivity"
+        android:name="com.nshmura.strictmodenotifier.StrictModeReportActivity"
         android:enabled="false"
         android:icon="@drawable/strictmode_notifier_ic_launcher"
         android:label="@string/strictmode_notifier_app_name"
+        android:exported="true"
         android:taskAffinity="com.nshmura.strictmodenotifier"
         android:theme="@style/StrictModeNotifier.AppTheme">
       <intent-filter>
@@ -21,7 +22,7 @@
     </activity>
 
     <activity
-        android:name=".StrictModeReportDetailActivity"
+        android:name="com.nshmura.strictmodenotifier.StrictModeReportDetailActivity"
         android:theme="@style/StrictModeNotifier.AppTheme"/>
 
   </application>

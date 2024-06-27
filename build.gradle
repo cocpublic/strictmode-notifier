@@ -27,25 +27,11 @@ task clean(type: Delete) {
 }
 
 ext {
-    minSdkVersion = 9
-    compileSdkVersion = 23
-    targetSdkVersion = compileSdkVersion
-    buildToolsVersion = '23.0.2'
-    javaVersion = JavaVersion.VERSION_1_7
-    supportLibraryVersion = '23.2.1'
+    minSdkVersion = 21
+    compileSdkVersion = 33
+    targetSdkVersion = 33
+    javaVersion = JavaVersion.VERSION_1_8
+    supportLibraryVersion = '1.6.0'
     versionCode = 4
-    versionName = "0.9.3"
-
-    POM_DEVELOPER_ID = "nshmura"
-    POM_GROUP = "com.nshmura"
-    POM_VERSION_NAME = versionName
-    POM_URL = "https://github.com/nshmura/strictmode-notifier"
-
-    POM_ARTIFACT_ID = "strictmode-notifier"
-    POM_ARTIFACT_NAME = "strictmode-notifier"
-    POM_DESCRIPTION = "An Android library that report notification of StrictMode violation."
-
-    POM_ARTIFACT_ID_NO_OP = "strictmode-notifier-no-op"
-    POM_ARTIFACT_NAME_NO_OP = "strictmode-notifier-no-op"
-    POM_DESCRIPTION_NO_OP = "No op strictmode-notifier"
+    versionName = "1.0"
 }

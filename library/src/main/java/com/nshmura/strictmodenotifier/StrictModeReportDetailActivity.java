@@ -20,6 +20,8 @@ import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.bzl.apm.strictmode.notifer.R;
+
 public class StrictModeReportDetailActivity extends Activity {
 
   private static final String EXTRA_REPORT = "EXTRA_REPORT";
